@@ -1,0 +1,85 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block extraMeta %}
+    {% endblock %}
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+    
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{% block title %}Doc{% endblock %}</title>
+</head>
+<body>
+    {% block nav %}
+        <nav class="">
+            <div class="nav-wrapper blue-grey darken-3">
+                <div class="container">
+                    
+                    <a href="#!" class="brand-logo  green-text text-accent-3"><i class="material-icons" style="font-size:30px">library_books</i> iFacturacion</a>
+                    <a href="#" data-activates="mobile-demo" data-beloworigin="true" class="button-collapse  green-text text-accent-3"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a class=" green-text text-accent-3" href="">Inicio</a></li>
+                        <li><a class=" green-text text-accent-3" href="">Nosotros</a></li>
+                        <li><a class=" green-text text-accent-3" href="">Productos</a></li>
+                        <li><a class=" green-text text-accent-3" href="">Servicios</a></li>
+                        <li><a class=" green-text text-accent-3" href="">Contactanos</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li><a class=" green-text text-accent-3" href="">Inicio</a></li>
+                        <li><a class=" green-text text-accent-3" href="">Nosotros</a></li>
+                        <li><a class=" green-text text-accent-3" href="">Productos</a></li>
+                        <li><a class=" green-text text-accent-3" href="">Servicios</a></li>
+                        <li><a class=" green-text text-accent-3" href="">Contactanos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+    <footer class="page-footer blue-grey darken-3">
+        <div class="container">
+            <div class="row">
+            <div class="col l6 s12">
+                <h4 class="green-text text-accent-3">Informacion de Palerp</h4>
+                <p class="green-text text-accent-3">Calle SacsayHuaman F - 12 Urb. Manuel Prado - Cusco</p>
+                <p class="green-text text-accent-3">tsolorzano@palerp.com</p>
+                <p class="green-text text-accent-3">www.palerp.com</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="green-text text-accent-3">Telefonos</h5>
+                <ul>
+                <li><a class="green-text text-accent-3" href="#!">(084) 28-76-41</a></li>
+                <li><a class="green-text text-accent-3" href="#!">(051) 985-855-998</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container green-text text-accent-3">
+            © 2018 Copyright
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+
+    <script>
+        $(".button-collapse").sideNav();
+    </script>
+
+    {% block extrajs %}
+    {% endblock %}
+</body>
+</html>
