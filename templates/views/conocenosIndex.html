@@ -2,15 +2,42 @@
 {% load staticfiles %}
 {% block title %}iFacturacion{% endblock %}
 {% block content %}
-<div class="container" style="min-height: 700px">
-  
+<div class="slider">
+  <ul class="slides">
+    <li>
+      <img src="{% static 'images/sli11.jpg' %}" alt="sliderImage1">
+      <div class="caption center-align">
+        <h3 class="white-text"><b>Palerp</b></h3>
+        <h5 class="light white-text"><b>Dedicados al desarrollo de software</b></h5>
+      </div>
+    </li>
+    <li>
+      <img src="{% static 'images/sli31.jpg' %}" alt="sliderImage2">
+      <div class="caption left-align">
+        <h3 class="white-text"><b>iFacturacion</b></h3>
+        <h5 class="light white-text"><b>Tu software a medida.</b></h5>
+      </div>
+    </li>
+    <li>
+      <img src="{% static 'images/sli21.jpg' %}" alt="sliderImage3">
+      <div class="caption right-align">
+        <h3 class="white-text"><b>PideloApp</b></h3>
+        <h5 class="light white-text"><b>Disfruta del tiempo.</b></h5>
+      </div>
+    </li>
+  </ul>
 </div>
-{% endblock %}
 
+{% endblock %}
+  
 {% block extrajs %}
 <script>
   $(document).ready(function(){
-    $('.scrollspy').scrollSpy();
+    $('.slider').slider({
+      indicators: false,
+      height: 650,
+      interval: 6000,
+    });
   });
 </script>
 {% endblock %}
